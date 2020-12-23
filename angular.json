@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "online-shop-suggester-supported-by-operator"
+  "defaultProject": "online-shop-suggester-supported-by-operator",
+  "cli": {
+    "analytics": "e8022cb7-96aa-4c18-bdb3-376eee08a19e"
+  }
 }
