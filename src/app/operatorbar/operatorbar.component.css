@@ -1,5 +1,5 @@
-input[type=text]{
-    width: 400px;
+input[type=text], input[type=password]{
+    width: 150px;
     outline-color: rgb(0, 0, 0);
     border-color: rgb(0, 0, 0);
     background-color: rgb(245, 245, 240);
