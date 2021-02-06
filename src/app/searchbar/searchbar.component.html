@@ -3,6 +3,7 @@
         Search: 
     </div>
     <div style="width:400px;float:left;">
-        <input type="text" id="searchText">
+        <input type="text" id="searchText" #searchText (keyup)="searchh(searchText.value)">
+        <button (click)="searchClick()">Search</button>
     </div>
 </form>

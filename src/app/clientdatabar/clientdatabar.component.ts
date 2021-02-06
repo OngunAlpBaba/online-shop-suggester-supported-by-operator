@@ -11,5 +11,4 @@ export class ClientdatabarComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

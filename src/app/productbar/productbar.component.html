@@ -1,1 +1,7 @@
-<p>productbar works!</p>
+<div class="section-container">
+    <div class="card-deck products">
+        <div *ngFor="let product of products">
+            <app-product [productInput]="product"></app-product>
+        </div>
+    </div>
+</div>

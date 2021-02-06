@@ -1,1 +1,11 @@
-<p>suggestionbar works!</p>
+<div *ngIf="question" class="section-container">
+    <fieldset>
+        <legend>Suggestion</legend>
+        <app-product class="products" [productInput]="product"></app-product>
+        <div>
+            Did you like this suggestion?
+            <button *ngIf="question" (click)="likeorDis(true)">Liked</button>
+            <button *ngIf="question" (click)="likeorDis(false)">Disliked</button>
+        </div>
+    </fieldset>
+</div>

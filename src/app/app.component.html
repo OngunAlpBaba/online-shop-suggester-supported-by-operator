@@ -1,13 +1,14 @@
-<app-operatorbar id="opbar"></app-operatorbar>
+<app-operatorbar id="opbar" *ngIf="user" (user)="ozLoggedIn($event)"></app-operatorbar>
+<!--[user]="user" [oz]="oz"-->
 
-<app-searchbar id="serbar"></app-searchbar>
+<app-searchbar id="serbar" *ngIf="user" (searchT)="searched($event)"></app-searchbar>
 
-<app-productbar id="prodbar"></app-productbar>
+<app-productbar id="prodbar" *ngIf="user" [searchT]="searchText"></app-productbar>
 
-<app-suggestionbar id="suggbar"></app-suggestionbar>
+<app-suggestionbar id="suggbar" *ngIf="user"></app-suggestionbar>
 
-<app-clientdatabar id="clientbar"></app-clientdatabar>
+<app-clientdatabar id="clientbar" *ngIf="oz"></app-clientdatabar>
 
-<app-productdetailbar id="proddetbar"></app-productdetailbar>
+<app-productdetailbar id="proddetbar" *ngIf="oz"></app-productdetailbar>
 
-<app-suggesterbar id="suggerbar"></app-suggesterbar>
+<app-suggesterbar id="suggerbar" *ngIf="oz"></app-suggesterbar>

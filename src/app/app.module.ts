@@ -10,6 +10,10 @@ import { SuggestionbarComponent } from './suggestionbar/suggestionbar.component'
 import { ClientdatabarComponent } from './clientdatabar/clientdatabar.component';
 import { ProductdetailbarComponent } from './productdetailbar/productdetailbar.component';
 import { SuggesterbarComponent } from './suggesterbar/suggesterbar.component';
+import { ProductComponent } from './product/product.component';
+
+import { ProductService } from './product.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,13 +24,15 @@ import { SuggesterbarComponent } from './suggesterbar/suggesterbar.component';
     SuggestionbarComponent,
     ClientdatabarComponent,
     ProductdetailbarComponent,
-    SuggesterbarComponent
+    SuggesterbarComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

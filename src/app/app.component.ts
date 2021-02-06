@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'online-shop-suggester-supported-by-operator';
+  user="asds";
+  oz="";
+  searchText:string = "";
+
+  ozLoggedIn(operatorName:string):void{
+    this.oz = operatorName;
+    this.user = "";
+  }
+
+  searched(searchText:string):void{
+    this.searchText = searchText;
+  }
 }

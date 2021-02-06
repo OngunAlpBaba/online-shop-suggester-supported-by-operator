@@ -1,10 +1,10 @@
-<form>
+<div>
     <div style="overflow:auto;">
         <div style="width:100px;float:left;">
             OperatorID: 
         </div>
         <div style="width:100px;float:left;">
-            <input type="text" id="opID">
+            <input type="text" id="opID" #username (keyup)="userr(username.value)" (keydown)="userr(username.value)" required>
         </div>
     </div>
 
@@ -13,7 +13,14 @@
             Password: 
         </div>
         <div style="width:100px;float:left;">
-            <input type="password" id="opPass">
+            <input type="password" id="opPass" #password (keyup)="passs(username.value)"  required>
         </div>
     </div>
-</form>
+
+    <div style="overflow:auto;">
+        <div style="width:100px;float:left;">
+            <button (click)="setUser()">Login</button>
+            <p hidden>ID or password missing!</p>
+        </div>
+    </div>
+</div>
